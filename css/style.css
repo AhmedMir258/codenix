@@ -1,50 +1,45 @@
 /* Global Styling */
 body {
-    font-family: Arial, sans-serif;
-    background-color:#0c0804;
-    background-image: url(../images/group_logo.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    -moz-backface-visibility: hidden;
-    color: gold;
+    width: 80;
     margin: 0;
-    padding-top: 80px; /* Added space to prevent content from overlapping with fixed header */
-    padding-bottom: 80px; /* Added space to prevent content from overlapping with fixed footer */
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #0a0a0a;
+    color: #fff;
 }
 
 header {
-    background-color: #222;
-    padding: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 1000;
+    background-color: #333;
+    color: #fff;
+    padding: 5px 0;
+    position: relative;
+    z-index: 1;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 .header-content {
     width: 80%;
     display: flex;
-    align-items: center;
+    align-items: center; /* Centers items vertically */
     justify-content: center;
+    padding: 10px 0; /* Adjust as needed */
 }
 
 .logo-img {
-    width: 100px; /* Increased size */
+    width: 60px; /* Increased size */
+    margin-top: 5px;
 }
 
 .slogan {
     flex: 1;
     text-align: center;
-    font-size: 24px;
+    font-size: 18px; /* Decreased font size */
     color: gold;
     opacity: 0;
     transform: translateX(-100%); /* Starts off-screen */
     animation: slideIn 2s ease forwards; /* Adjusted animation time */
     animation-delay: 0.5s; /* Added a delay to trigger the animation later */
+    margin: 0; /* Remove any default margin */
 }
 
 
@@ -74,7 +69,7 @@ header {
 }
 
 .about-top h1{
-    font-size: 3em;
+    font-size: 2.2em;
     font-weight: bold;
     margin: 0;
     color: gold;
@@ -90,7 +85,7 @@ header {
 
 
 .about-top button {
-    background-color: gold;
+    background-color: cyan;
     font-size: 1.5em; /* Increased font size for button */
     margin-top: 15px;
     color: #111;
@@ -104,7 +99,7 @@ header {
 }
 
 .about-top button:hover {
-    background-color: cyan; /* Slightly lighter gold */
+    background-color: gold; /* Slightly lighter gold */
     transform: scale(1.05); /* Slight scaling for emphasis */
 }
 
@@ -263,16 +258,16 @@ footer {
 /* Our Services Section Styling */
 .services-section {
     background-color: #111;
-    color: gold;
+    color: cyan;
     padding: 40px 20px;
     text-align: center;
 }
 
 /* Header styles */
 .services-section h2 {
-    font-size: 4em;
+    font-size: 2em;
     margin-bottom: 30px;
-    color: cyan;
+    color: gold;
 }
 
 /* Service grid layout */
@@ -371,27 +366,28 @@ footer {
     color: gold;
     padding: 40px 20px;
     text-align: center;
-    font-size: 2em; /* Increased font size for bold text */
+    font-size: 1.5em; /* Increased font size for bold text */
     font-weight: bold; /* Make the text bold */
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 15px;
+    margin-bottom: 25px;
 }
 
 .call-to-action p {
-    font-size: 1.5em;
+    font-size: 1.0em;
     font-weight: bold;
     margin: 0;
 }
 
 .call-to-action button {
     background-color: cyan;
-    font-size: 1.5em; /* Increased font size for button */
+    font-size: 0.5em; /* Increased font size for button */
 
     color: #111;
     border: none;
-    padding: 10px 20px;
+    padding: 8px 13px;
     font-size: 1em;
     font-weight: bold;
     border-radius: 5px;
@@ -426,14 +422,14 @@ footer {
 }
 
 .sponsor-heading h1 {
-    font-size: 2.5em;
+    font-size: 1.8em;
     font-weight: bold;
     margin: 0;
     color: gold;
 }
 
 .sponsor-heading p {
-    font-size: 1.5em;
+    font-size: 1.3em;
     margin: 10px 0 0;
     color: cyan;
 }
@@ -445,19 +441,6 @@ footer {
         transform: translateY(0); /* End at original position */
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -501,7 +484,7 @@ footer {
 .member-image img {
     width: 75%; /* Image width */
     height: auto; /* Maintain aspect ratio */
-    border-radius: 50%; /* Circular image */
+    border-radius: 80%; /* Circular image */
     animation: fadeIn 3s ease; /* Fade in animation */
 }
 .member-info{
@@ -574,4 +557,78 @@ footer {
 
 .social-media a:hover {
     color: #fff; /* Change color on hover */
+}
+
+.back-arrow {
+    position: fixed; /* or absolute depending on your layout */
+    top: 20px; /* Adjust as needed */
+    left: 20px; /* Adjust as needed */
+    z-index: 1000; /* Ensure it's on top of other elements */
+    margin-top: 68px;
+}
+
+.back-arrow a {
+    color: white; /* Change this to the color you want for the arrow */
+    font-size: 24px; /* Adjust size as needed */
+    text-decoration: none; /* Remove underline */
+}
+
+
+
+
+
+
+
+
+/* Fix header overlap by adding margin below */
+.team-section {
+    display: flex;
+    justify-content: center; /* This centers items horizontally */
+    align-items: center; /* Optional: vertically centers items */
+    flex-wrap: wrap; /* If the images overflow, they wrap to the next line */
+    gap: 20px; /* Optional: add space between images */
+    padding: 20px; /* Optional: add padding to the section */
+}
+.team-section h2{
+    font-size: 2.2em;
+    color: gold;
+}
+
+.team-members {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 80px;
+    padding: 20px;
+}
+
+.member {
+    text-align: center;
+}
+
+.member img {
+    width: 200px;
+    height: 200px;
+    border-radius: 20px;
+    object-fit: cover;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.member h3 {
+    margin: 10px 0 5px 0;
+    color: #ffd700;
+}
+
+.member p {
+    color: #fff;
+    font-style: italic;
+}
+
+footer {
+    background-color: #333;
+    color: #ffd700;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 12px;
+    margin-top: 50px;
 }
